@@ -1,0 +1,38 @@
+#To Generate SSH Key:
+ssh-keygen -t rsa -b 4096 -C "youremail@gmail.com"
+
+
+#Start SSH Agent:
+eval "$(ssh-agent -s)"
+
+
+#Add SSH Key to SSH Agent:
+ssh-add ~/.ssh/id_rsa
+
+#to list keys
+ls | grep keyname(which has been entered)
+
+cat keyname.pub
+
+
+#Adding SSH Key to GitHub:
+#Copy SSH Key to Clipboard:
+method 1:clip < ~/.ssh/id_rsa.pub 
+method 2:copy the code manually
+
+Sign in to your GitHub account.
+Go to Settings:
+
+Click on your profile picture in the top right and select "Settings."
+Access SSH and GPG Keys:
+
+In the left sidebar, click on "SSH and GPG keys."
+Add New SSH Key:
+
+Click on "New SSH key."
+Paste SSH Key:
+
+In the "Key" field, paste your SSH key.
+Add SSH Key:
+
+Give your key a recognizable title (e.g., "My Laptop") and click "Add SSH Key."
