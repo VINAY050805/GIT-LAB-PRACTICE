@@ -1,5 +1,5 @@
 #To Generate SSH Key:
-ssh-keygen -t rsa -b 4096 -C "youremail@gmail.com"
+ssh-keygen -t ed25519 -C "abc@gmail.com"
 
 
 #Start SSH Agent:
@@ -7,12 +7,9 @@ eval "$(ssh-agent -s)"
 
 
 #Add SSH Key to SSH Agent:
-ssh-add ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_ed25519
 
-#to list keys
-ls | grep keyname(which has been entered)
-
-cat keyname.pub
+cat ~/.ssh/id_ed25519.pub
 
 
 #Adding SSH Key to GitHub:
